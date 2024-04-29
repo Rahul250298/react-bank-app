@@ -7,7 +7,7 @@ const Testimonials = () => {
       <div>
         <CommonTitle title="What People are saying about us" />
         <p className="text-dimWhite md:text-lg text-base">
-          Everything you need to accept card payments and grow your business
+          Its done
           anywhere on the planet.
         </p>
         <div className="grid ss:grid-cols-2 md:grid-cols-3 gap-10 ss:gap-5 sm:gap-10 mt-10 sm:mt-16">
