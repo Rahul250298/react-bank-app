@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test
+  labels:
+    app: react-app
+spec:
+  type: ClusterIP  # Change to NodePort if you don't want a LoadBalancer
+  selector:
+    app: react-app
+  ports:
+    - protocol: TCP
+      port: 80   # External port to expose
+      targetPort: 80  # Internal port on the container
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test
+  labels:
+    app: react-app
+spec:
+  replicas: 3  # Number of replicas/pods
+  selector:
+    matchLabels:
+      app: react-app
+  template:
+    metadata:
+      labels:
+        app: react-app
+    spec:
+      containers:
+      - name: mreact-app
+        image: testpython.azurecr.io/react-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80  # 
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
