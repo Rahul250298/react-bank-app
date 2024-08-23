@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: testpython.azurecr.io/react-app
+        image: testpython.azurecr.io/react-app:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80  # 
