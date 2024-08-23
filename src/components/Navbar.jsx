@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className="mb-5 md:mb-10 bg-primary ">
       <div className="container px-5 md:px-10 mx-auto relative font-poppins flex items-center justify-between py-8">
         <div>
-          <h2 className="text-2xl">Naseem.</h2>
+          <h2 className="text-2xl">RAHUL</h2>
         </div>
 
         <div>
