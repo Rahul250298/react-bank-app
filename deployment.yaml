@@ -5,7 +5,7 @@ metadata:
   labels:
     app: react-app
 spec:
-  type: ClusterIP  # Change to NodePort if you don't want a LoadBalancer
+  type: LoadBalancer  # Change to NodePort if you don't want a LoadBalancer
   selector:
     app: react-app
   ports:
